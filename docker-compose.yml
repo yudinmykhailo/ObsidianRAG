@@ -1,6 +1,6 @@
 services:
   backend:
-    build: ./backend
+    image: ghcr.io/yudinmykhailo/obsidianrag-backend:latest
     ports:
       - "8000:8000"
     volumes:
