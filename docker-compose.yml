@@ -8,7 +8,7 @@ services:
       - hf-cache:/home/appuser/.cache/huggingface
     environment:
       - OBSIDIANRAG_OBSIDIAN_PATH=/vault
-      - OBSIDIANRAG_OLLAMA_BASE_URL=http://host.docker.internal:11434
+      - OBSIDIANRAG_OLLAMA_BASE_URL=${OLLAMA_URL:-http://host.docker.internal:11434}
       - OBSIDIANRAG_LLM_MODEL=${LLM_MODEL:-gemma3}
     extra_hosts:
       - "host.docker.internal:host-gateway"
